@@ -1,0 +1,76 @@
+import React, { useState } from "react";
+import { AppBar, Toolbar, Typography, InputBase, IconButton, Button, Menu, MenuItem, Box } from "@mui/material";
+import { Search as SearchIcon, AccountCircle, Brightness4, Brightness7 } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
+import "./Header.css";
+
+const Header = () => {
+  const [dark, setDark] = useState(false);
+  const [menu, setMenu] = useState(null);
+
+  const Dark = () => {
+    setDark(!dark);
+  };
+
+  const openMenu = (event) => {
+    setMenu(event.currentTarget);
+  };
+
+  const closeMenu = () => {
+    setMenu(null);
+  };
+
+  return (
+    <AppBar position="static" className={`header ${dark ? "dark" : ""}`}>
+      <Toolbar className="toolbar">
+        
+        <Box className="logoBox">
+          <img src="/images/logo.jpg" alt="Logo" className="logo" />
+          <Typography variant="h6" className="name">Innovators Tech</Typography>
+        </Box>
+
+        
+        <Box className="searchBox">
+          <InputBase placeholder="Search…" className="searchInput" />
+          <IconButton className="searchBtn">
+            <SearchIcon />
+          </IconButton>
+        </Box>
+
+        
+        <Box className="navBox">
+          <Button color="inherit">Home</Button>
+          <Button color="inherit">About</Button>
+          <Button color="inherit">Services</Button>
+          <Button color="inherit">Contact</Button>
+
+          
+          <IconButton onClick={Dark} color="inherit">
+            {dark ? <Brightness7 /> : <Brightness4 />}
+          </IconButton>
+
+          
+          <Button className="signupBtn" color="inherit">Login</Button>
+          <Button variant="contained" className="signupBtn">Sign Up</Button>
+
+          
+          <IconButton onClick={openMenu} color="inherit">
+            <AccountCircle />
+          </IconButton>
+          <Menu anchorEl={menu} open={Boolean(menu)} onClose={closeMenu}>
+            <MenuItem onClick={closeMenu}>Profile</MenuItem>
+            <MenuItem onClick={closeMenu}>Settings</MenuItem>
+            <MenuItem onClick={closeMenu}>Logout</MenuItem>
+          </Menu>
+
+          
+          <IconButton className="menuIcon">
+            <MenuIcon />
+          </IconButton>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
