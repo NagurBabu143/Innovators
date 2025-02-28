@@ -72,7 +72,7 @@ const Header = () => {
           </IconButton>
 
           
-          <Button className="loginBtn" color="inherit">Login</Button>
+          <Button className="loginBtn"  color="inherit">Login</Button>
           <Button variant="contained" className="signupBtn">Sign Up</Button>
 
           
