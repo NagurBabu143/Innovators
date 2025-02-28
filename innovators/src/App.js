@@ -1,13 +1,33 @@
+import React, { useState } from "react";
+import "./App.css";
+import Home from "./Components/Home/Home";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import Header from "./Components/Header/Header";
+import About from "./Components/About/About";
 
-import './App.css';
-import Header from './Components/Header/Header';
+const App = () => {
+  const [activePage, setActivePage] = useState("Home");
 
-function App() {
+  const renderPage = () => {
+    switch (activePage) {
+      case "Home":
+        return <Home />;
+      case "About":
+        return <About/>
+      default:
+        return <Home />;
+    }
+  };
+
   return (
-    <div>
-      <Header/>
+    <div className="app-container">
+      <Header setActivePage={setActivePage} />
+      <div className="content-wrapper">
+        <Sidebar setActivePage={setActivePage} />
+        <div className="main-content">{renderPage()}</div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
