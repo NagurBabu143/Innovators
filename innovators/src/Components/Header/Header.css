@@ -1,7 +1,7 @@
-
 .header {
     background-color: #1e1e2f;
     color: white;
+    padding: 5px 0;
   }
   
   .toolbar {
@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
   }
-
+  
   .logoBox {
     display: flex;
     align-items: center;
@@ -18,8 +18,8 @@
   .logo {
     height: 40px;
     margin-right: 10px;
-    border: 2px solid rgb(247, 237, 237);
-    border-radius: 15px;
+    border-radius: 18px;
+
   }
   
   .name {
@@ -27,7 +27,6 @@
     font-weight: bold;
   }
   
- 
   .searchBox {
     display: flex;
     align-items: center;
@@ -46,22 +45,35 @@
     color: black;
   }
   
-
   .navBox {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+  }
+  
+  .loginBtn {
+    border: 1px solid rgb(249, 4, 4);
+    padding: 6px 14px;
+    border-radius: 5px;
+    background-color: #ff9800;
+    transition: 0.3s;
+  }
+  
+  .loginBtn:hover {
+    background-color: #ff9800;
   }
   
   .signupBtn {
     background-color: #ff9800;
     color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
   }
   
   .signupBtn:hover {
     background-color: #e68900;
   }
-  
   
   .header.dark {
     background-color: #181818;
@@ -81,5 +93,21 @@
   
   .dark .navBox button {
     color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .navBox {
+      display: none;
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .menuIcon {
+      display: none;
+    }
   }
   
