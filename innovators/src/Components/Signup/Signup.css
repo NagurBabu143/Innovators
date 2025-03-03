@@ -1,0 +1,35 @@
+.signup-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .signup-btn {
+    background: #1976d2;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .signup-btn:hover {
+    background: #1259a2;
+  }
+  
+  .switch-text {
+    margin-top: 10px;
+  }
+  
+  .switch-text span {
+    color: #1976d2;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .switch-text span:hover {
+    text-decoration: underline;
+  }
+  

@@ -65,8 +65,8 @@ const Header = ({ setActivePage, activePage }) => {
             {dark ? <Brightness7 /> : <Brightness4 />}
           </IconButton>
 
-          <Button className="loginBtn" color="inherit">Login</Button>
-          <Button variant="contained" className="signupBtn">Sign Up</Button>
+          <Button className="loginBtn" color="inherit"onClick={() => setActivePage("Login")}>Login</Button>
+          <Button variant="contained" className="signupBtn"onClick={() => setActivePage("Signup")}>Signup</Button>
 
           <IconButton onClick={openMenu} color="inherit">
             <AccountCircle />
