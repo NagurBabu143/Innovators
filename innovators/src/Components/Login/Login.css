@@ -1,0 +1,44 @@
+.login-container {
+    position: absolute;
+    top: 63%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    width: 63%; 
+    padding: 20px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Adjust button styles */
+.login-btn {
+    background: #1976d2;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background: #1259a2;
+}
+
+/* Styling for switch text */
+.switch-text {
+    margin-top: 10px;
+}
+
+.switch-text span {
+    color: #1976d2;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switch-text span:hover {
+    text-decoration: underline;
+}
